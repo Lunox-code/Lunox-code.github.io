@@ -1,0 +1,425 @@
+/* Scroll To Top Button */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#myBtn {
+    display: auto;
+    /* Fix this */
+    position: fixed;
+    bottom: 0px;
+    right: 2px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: transparent;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: transparent;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #f1f1f1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container1 {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container1::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 4px solid #ff014f;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -12px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: #f1f1f1;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container1 {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container1::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
+
+
+/* ------------------------------------------------------------------*/
+
+
+/* To center link text of the portfolio card */
+div.centertext {
+    text-align: center;
+}
+
+
+
+/* ------------------------------------------------------------------*/
+
+
+
+/* CSS FOR SLIDESHOW CAROUSEL */
+/* To change imagen size of the carousel */
+.carousel {
+
+    height: 280px;
+    border-radius: 20px;
+    border: #000;
+    box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 0.35);
+
+}
+
+.cards {
+    width: 450px;
+    margin-inline-end: 6%;
+    margin-inline-start: 2%;
+    margin-bottom: 70px;
+}
+
+
+.carousel:hover {
+    -webkit-transform: scale(1.5);
+    /* or some other value */
+    transform: scale(1.4);
+}
+
+
+.carousel .carousel-item img {
+    width: 80%;
+    max-height: 400px;
+}
+
+
+/* ------------------------------------------------------------------*/
+
+
+
+/* FOOTER */
+.footer {
+   position: auto;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: black;
+   text-align: center;
+
+}
+
+.fa {
+    color: black;
+    margin-inline: 2px;
+  }
+
+
+
+
+/* ------------------------------------------------------------------*/
+
+
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+  .hobbies {
+
+    margin-inline-end: 6%;
+    margin-inline-start: 2%;
+    margin-bottom: 20px;
+}
+  
+
+
+
+/* ------------------------------------------------------------------*/
+
+
+
+
+
+
+/* Grid Photography */
+.contenedor {
+    height: 100%;
+    padding: 20px;
+    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 75px;
+    grid-auto-flow: dense;
+  }
+  .contenedor div {
+    font-family: Nunito;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fdfdfd;
+    background-color: #ac8e56;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .contenedor div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .horizontal {
+    grid-column: auto / span 2
+  }
+  .vertical {
+    grid-row: auto / span 2;
+  }
+  .grande {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+
+
+
+
+
+
+
+
+  /* -----------------ARREGLAR EL NAVBAR------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  .nav {
+    height: 55px;
+    width: 100%;
+    background-color: #4d4d4d;
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 15px;
+    
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: left;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: left;
+      display: absolute;
+      background-color: #333;
+      height: 100px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 300px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+
+
+
+
+
+
+/* ---------------------ARREGLAR EL NAVBAR DE ARRIBA-------------------------*/
+
+
+
+
