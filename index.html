@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
+
     <!--Social Media Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -29,7 +34,7 @@
     </button>
 
     <!--Principal animation-->
-    <div class="row">
+    <div class="background">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_graufke1.json" background="transparent"
             speed="1" loop autoplay></lottie-player>
@@ -64,7 +69,6 @@
             </div>
         </div>
     </div>
-
 
     <!--ScrollSpy with sticky bar-->
     <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
@@ -145,7 +149,8 @@
             with 8 months of experience in web development and design. W3C web developer certification. Over 5 years of
             experience working on personal projects.
             <br>
-            Currently, I am seeking a new challenging experience to deliver proven excellent web development skills in an
+            Currently, I am seeking a new challenging experience to deliver proven excellent web development skills in
+            an
             industry with intelligent, sustainable, and innovative incentives for growth.
         </p>
         <br>
@@ -873,7 +878,6 @@
         <br>
 
         <!--Carousel container-->
-        <div class="container-fluid">
             <div class="row">
 
                 <!--colum 1 hobbies-->
@@ -917,8 +921,12 @@
                     </lottie-player>
                 </div>
             </div>
-        </div>
     </div>
+    
+    <!--ScrollReveal-->
+    <script>
+        ScrollReveal().reveal('.container-fluid', { duration: 3000 })
+    </script>
 
     <!--Footer-->
     <footer class="footer" style="padding:20px;">
