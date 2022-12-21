@@ -1,4 +1,4 @@
-<h2>No longer available</h2>
+<h2>No longer under active development.</h2>
 
 Version 2:
 
